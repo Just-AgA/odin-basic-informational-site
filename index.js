@@ -21,6 +21,24 @@ const server = http.createServer((req, res) => {
     });
     return;
   }
+
+  switch (req.url) {
+    case '/':
+      filepath = path.join(__dirname, 'index.html');
+      break;
+    case '/home':
+      res.writeHead(302, { Location: '/' });
+      res.end();
+      return;
+    case '/about':
+      filepath = path.join(__dirname, 'about.html');
+      break;
+    case '/contact-me':
+      filepath = path.join(__dirname, 'contact-me.html');
+      break;
+    default:
+      filepath = path.join(__dirname, '404.html');
+  }
 });
 
 server.listen(PORT, () => {
