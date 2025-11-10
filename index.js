@@ -39,6 +39,16 @@ const server = http.createServer((req, res) => {
     default:
       filepath = path.join(__dirname, '404.html');
   }
+
+  fs.readFile(filepath, (err, data) => {
+    if (err) {
+      res.writeHead(500, { 'Content-Type': 'text/plain' });
+      res.end('500 - Internal Server Error');
+    } else {
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(data);
+    }
+  });
 });
 
 server.listen(PORT, () => {
