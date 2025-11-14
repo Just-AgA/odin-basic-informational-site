@@ -28,6 +28,10 @@ app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, '404.html'));
 });
 
+app.listen(PORT, () => {
+  console.log(`Server listening on port: ${PORT}`);
+});
+
 // const server = http.createServer((req, res) => {
 //   let filepath;
 
