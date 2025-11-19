@@ -4,4 +4,4 @@ This project covers the bascis of creating a simple web server using only the bu
 
 # Changes to the project
 
-Due to the different parts of TheOdin Project curriculum,Express framework was installed for this project so the end result looks different from the beginning. The changes to this project can be seen and tracked in the different commits that have been done during the work of configuring the web server.
+Due to the different parts of The Odin Project curriculum,Express framework was installed for this project so the end result looks different from the beginning. The changes to this project can be seen and tracked in the different commits that have been done during the work of configuring the web server.
